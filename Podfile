@@ -1,0 +1,45 @@
+platform :ios, '9.0'
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+
+target 'Bukuma_ios_swift' do
+pod 'Alamofire'
+pod 'SwiftyJSON'
+pod 'PhotoSlider',  :git => 'https://github.com/bati668/PhotoSlider'
+pod 'SDWebImage'
+pod 'CollectionViewWaterfallLayout', :git => 'https://github.com/bati668/CollectionViewWaterfallLayout'
+pod 'RDVTabBarController', :git => 'https://github.com/bati668/RDVTabBarController'
+pod 'Siren'
+pod 'SwiftyTimer'
+pod 'SwiftyUserDefaults'
+pod 'Timepiece'
+pod 'SwiftyBeaver'
+pod 'Fabric'
+pod 'Crashlytics'
+pod 'GLDTween'
+pod 'Firebase'
+pod 'Firebase/Messaging'
+pod 'Firebase/Core'
+pod 'LUKeychainAccess'
+pod 'AppsFlyerFramework'
+pod 'Google/Analytics'
+pod 'FBSDKCoreKit'
+pod 'FBSDKShareKit'
+pod 'FBSDKLoginKit'
+pod 'FBSDKMessengerShareKit'
+pod 'FBAudienceNetwork'
+pod 'SVProgressHUD'
+pod 'MTBBarcodeScanner'
+pod 'FMDB'
+pod 'LINEActivity'
+pod 'JDStatusBarNotification'
+pod 'GoogleConversionTracking'
+pod 'RMUniversalAlert'
+pod 'FrameAccessor'
+pod 'Repro'
+
+post_install do | installer |
+    require 'fileutils'
+    FileUtils.cp_r('Pods/Target Support Files/Pods-Bukuma_ios_swift/Pods-Bukuma_ios_swift-acknowledgements.plist', 'Bukuma_ios_swift/Settings.bundle/Acknowledgements.plist', :remove_destination => true)
+end
+end

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="3Ty-zx-asc" customClass="AddressAndNameWithDefaultCheckCell" customModule="Bukuma_ios_swift" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3Ty-zx-asc" id="gOf-eq-Mxk">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5VG-dD-TYW">
+                        <rect key="frame" x="12" y="4" width="324" height="38"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cvY-FH-E37">
+                                <rect key="frame" x="0.0" y="0.0" width="324" height="0.0"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yLw-dY-PKU">
+                                <rect key="frame" x="0.0" y="4" width="324" height="0.0"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="cvY-FH-E37" secondAttribute="trailing" id="FTy-fh-o9O"/>
+                            <constraint firstItem="yLw-dY-PKU" firstAttribute="top" secondItem="cvY-FH-E37" secondAttribute="bottom" constant="4" id="KJS-Gz-WX6"/>
+                            <constraint firstItem="yLw-dY-PKU" firstAttribute="leading" secondItem="5VG-dD-TYW" secondAttribute="leading" id="Tt5-4E-Yi7"/>
+                            <constraint firstItem="cvY-FH-E37" firstAttribute="leading" secondItem="5VG-dD-TYW" secondAttribute="leading" id="h8s-n8-gsa"/>
+                            <constraint firstItem="cvY-FH-E37" firstAttribute="top" secondItem="5VG-dD-TYW" secondAttribute="top" id="lCc-Zj-eDE"/>
+                            <constraint firstAttribute="trailing" secondItem="yLw-dY-PKU" secondAttribute="trailing" id="lbN-t1-6Vk"/>
+                        </constraints>
+                    </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_to_check" translatesAutoresizingMaskIntoConstraints="NO" id="MDR-fU-k5E">
+                        <rect key="frame" x="340" y="5" width="35" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="Raf-Fl-7Lg"/>
+                            <constraint firstAttribute="width" constant="35" id="U6F-eC-eAq"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="MDR-fU-k5E" secondAttribute="trailing" id="1qG-uT-bFS"/>
+                    <constraint firstAttribute="bottom" secondItem="5VG-dD-TYW" secondAttribute="bottom" constant="18" id="5AP-C4-ETW"/>
+                    <constraint firstItem="5VG-dD-TYW" firstAttribute="leading" secondItem="gOf-eq-Mxk" secondAttribute="leading" constant="12" id="ZdT-bx-tvK"/>
+                    <constraint firstItem="5VG-dD-TYW" firstAttribute="top" secondItem="gOf-eq-Mxk" secondAttribute="top" constant="4" id="cwH-ZV-YE6"/>
+                    <constraint firstAttribute="trailing" secondItem="5VG-dD-TYW" secondAttribute="trailing" constant="39" id="oRd-Vr-C3y"/>
+                    <constraint firstItem="MDR-fU-k5E" firstAttribute="centerY" secondItem="gOf-eq-Mxk" secondAttribute="centerY" id="oTU-dG-qbI"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="addressAndNameGroup" destination="5VG-dD-TYW" id="PKi-yr-vxU"/>
+                <outlet property="addressLabel" destination="cvY-FH-E37" id="8af-pJ-nCy"/>
+                <outlet property="defaultAddressMark" destination="MDR-fU-k5E" id="1sG-3G-kjX"/>
+                <outlet property="nameLabel" destination="yLw-dY-PKU" id="yqX-77-ltM"/>
+            </connections>
+            <point key="canvasLocation" x="-336.5" y="-226.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ic_to_check" width="35" height="50"/>
+    </resources>
+</document>

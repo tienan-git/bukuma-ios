@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="2cq-0N-NrC" customClass="TagEditorView" customModule="Bukuma_ios_swift" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IZe-bT-SCQ">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="0.5"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.12" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="0.5" id="AN3-YS-cCB"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aOH-hb-4e7">
+                    <rect key="frame" x="0.0" y="49.5" width="375" height="0.5"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.12" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="0.5" id="NFh-YF-vg5"/>
+                    </constraints>
+                </view>
+                <scrollView verifyAmbiguity="off" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MjN-bL-p50" customClass="TagEditor" customModule="Bukuma_ios_swift" customModuleProvider="target">
+                    <rect key="frame" x="5" y="7" width="305" height="36"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YbR-GF-Hvd">
+                            <rect key="frame" x="0.0" y="5.5" width="0.0" height="25"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </view>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v2Y-PR-5TZ" customClass="BackSpaceDetectableTextField" customModule="Bukuma_ios_swift" customModuleProvider="target">
+                            <rect key="frame" x="5" y="5.5" width="300" height="25"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.99215686274509807" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="36" id="67A-qy-d6j"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="tagCandidateText" destination="v2Y-PR-5TZ" id="Tv4-S8-0Jj"/>
+                        <outlet property="tagsBox" destination="YbR-GF-Hvd" id="7U8-O9-6jX"/>
+                    </connections>
+                </scrollView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3XM-CL-dtW">
+                    <rect key="frame" x="324" y="8" width="37" height="34"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                    <state key="normal" title="追加">
+                        <color key="titleColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.23921568627450979" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <state key="disabled">
+                        <color key="titleColor" red="0.50588235294117645" green="0.50588235294117645" blue="0.53333333333333333" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="tappedAddTagButton:" destination="2cq-0N-NrC" eventType="touchUpInside" id="qft-ep-YL9"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="aOH-hb-4e7" firstAttribute="leading" secondItem="2cq-0N-NrC" secondAttribute="leading" id="CbR-Eq-Iu9"/>
+                <constraint firstAttribute="trailing" secondItem="3XM-CL-dtW" secondAttribute="trailing" constant="14" id="Eh4-iq-bmK"/>
+                <constraint firstAttribute="bottom" secondItem="aOH-hb-4e7" secondAttribute="bottom" id="GYr-aH-ZPG"/>
+                <constraint firstItem="IZe-bT-SCQ" firstAttribute="leading" secondItem="2cq-0N-NrC" secondAttribute="leading" id="HxR-CK-MRy"/>
+                <constraint firstItem="MjN-bL-p50" firstAttribute="centerY" secondItem="2cq-0N-NrC" secondAttribute="centerY" id="HzW-SV-niz"/>
+                <constraint firstAttribute="trailing" secondItem="aOH-hb-4e7" secondAttribute="trailing" id="MWO-t3-deA"/>
+                <constraint firstItem="3XM-CL-dtW" firstAttribute="leading" secondItem="MjN-bL-p50" secondAttribute="trailing" constant="14" id="Pnw-12-sb8"/>
+                <constraint firstItem="3XM-CL-dtW" firstAttribute="centerY" secondItem="2cq-0N-NrC" secondAttribute="centerY" id="iSc-8X-X0P"/>
+                <constraint firstAttribute="trailing" secondItem="IZe-bT-SCQ" secondAttribute="trailing" id="kjt-9m-lEB"/>
+                <constraint firstItem="IZe-bT-SCQ" firstAttribute="top" secondItem="2cq-0N-NrC" secondAttribute="top" id="t66-7x-Xd0"/>
+                <constraint firstItem="MjN-bL-p50" firstAttribute="leading" secondItem="2cq-0N-NrC" secondAttribute="leading" constant="5" id="t8V-Sd-CZV"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="addTagButton" destination="3XM-CL-dtW" id="eal-pu-sbN"/>
+                <outlet property="tagEditor" destination="MjN-bL-p50" id="xis-uY-j4l"/>
+            </connections>
+            <point key="canvasLocation" x="-373" y="-361"/>
+        </view>
+    </objects>
+</document>

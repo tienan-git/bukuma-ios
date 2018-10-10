@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="R0f-rv-FYq" customClass="LabelAndImageCell" customModule="Bukuma_ios_swift" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="R0f-rv-FYq" id="VS8-l5-zza">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y9n-8w-hnL">
+                        <rect key="frame" x="12" y="13" width="37.5" height="17"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                        <color key="textColor" red="0.21568627450980393" green="0.21568627450980393" blue="0.24705882352941178" alpha="0.87" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pdd-95-ETE">
+                        <rect key="frame" x="340" y="-3" width="35" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" priority="250" constant="50" id="30j-24-SlV"/>
+                            <constraint firstAttribute="width" priority="250" constant="35" id="aYF-NA-tMH"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Y9n-8w-hnL" firstAttribute="leading" secondItem="VS8-l5-zza" secondAttribute="leading" constant="12" id="Atr-f2-Qv8"/>
+                    <constraint firstItem="pdd-95-ETE" firstAttribute="centerY" secondItem="VS8-l5-zza" secondAttribute="centerY" id="DJ5-ql-ZTt"/>
+                    <constraint firstAttribute="trailing" secondItem="pdd-95-ETE" secondAttribute="trailing" id="emq-B6-JzV"/>
+                    <constraint firstItem="Y9n-8w-hnL" firstAttribute="centerY" secondItem="VS8-l5-zza" secondAttribute="centerY" id="rlQ-l2-kJq"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="imageItem" destination="pdd-95-ETE" id="wQ6-cc-57y"/>
+                <outlet property="titleItem" destination="Y9n-8w-hnL" id="jC9-tl-JgF"/>
+            </connections>
+            <point key="canvasLocation" x="-177" y="-195"/>
+        </tableViewCell>
+    </objects>
+</document>

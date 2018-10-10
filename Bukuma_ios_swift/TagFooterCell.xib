@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="DUu-fM-szO" customClass="TagFooterCell" customModule="Bukuma_ios_swift" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DUu-fM-szO" id="itT-bH-jkc">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Glf-7c-hW1">
+                        <rect key="frame" x="169.5" y="14.5" width="35.5" height="16"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                        <color key="textColor" red="0.36078431372549019" green="0.396078431372549" blue="0.44705882352941173" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_see_more" translatesAutoresizingMaskIntoConstraints="NO" id="oSr-tc-jZJ">
+                        <rect key="frame" x="205" y="1" width="21" height="41"/>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QNh-Hx-XUz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="0.5"/>
+                        <color key="backgroundColor" red="0.8784313725490196" green="0.8784313725490196" blue="0.8784313725490196" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="0.5" id="7Vy-mj-psc"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="QNh-Hx-XUz" firstAttribute="leading" secondItem="itT-bH-jkc" secondAttribute="leading" id="2dx-F4-hny"/>
+                    <constraint firstItem="QNh-Hx-XUz" firstAttribute="top" secondItem="itT-bH-jkc" secondAttribute="top" id="4zK-vk-dhK"/>
+                    <constraint firstItem="oSr-tc-jZJ" firstAttribute="leading" secondItem="Glf-7c-hW1" secondAttribute="trailing" id="76j-zb-Czv"/>
+                    <constraint firstItem="Glf-7c-hW1" firstAttribute="centerY" secondItem="itT-bH-jkc" secondAttribute="centerY" id="IpR-Ko-71G"/>
+                    <constraint firstAttribute="trailing" secondItem="QNh-Hx-XUz" secondAttribute="trailing" id="Nby-3k-WCJ"/>
+                    <constraint firstItem="oSr-tc-jZJ" firstAttribute="centerY" secondItem="itT-bH-jkc" secondAttribute="centerY" id="gV8-Og-gtg"/>
+                    <constraint firstItem="Glf-7c-hW1" firstAttribute="centerX" secondItem="itT-bH-jkc" secondAttribute="centerX" id="xtC-87-92c"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
+            <connections>
+                <outlet property="cellTitle" destination="Glf-7c-hW1" id="hQT-Yh-64o"/>
+            </connections>
+            <point key="canvasLocation" x="-220" y="-265"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ic_see_more" width="21" height="41"/>
+    </resources>
+</document>
